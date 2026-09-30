@@ -85,14 +85,6 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
   box-shadow: 4px 4px 0 #7a1700;
 }
 .button:hover { color: #fff; transform: translate(1px, 1px); box-shadow: 3px 3px 0 #7a1700; }
-.button.is-disabled,
-.button.is-disabled:hover {
-  background: #3a3a46;
-  color: var(--muted);
-  box-shadow: 4px 4px 0 #1c1c24;
-  transform: none;
-  cursor: default;
-}
 .note { color: var(--muted); font-size: 14px; }
 kbd {
   font: 12px var(--sans);
