@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lava Tower + Color Switch · Evan Kash</title>
+  <meta name="description" content="Evan Kash's EECS 494 Project 2: a puzzle-platformer about climbing a rotating four-sided tower ahead of rising lava.">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Evan Kash</h1>
+      <p class="tagline">Game development · University of Michigan</p>
+      <nav><a href="../">← All projects</a> <a href="https://github.com/Evan-Kash">GitHub</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="project" id="tower">
+      <p class="eyebrow">EECS 494 · Project 2 · Solo project</p>
+      <h2>Lava Tower <span class="subtitle">+ Color Switch</span></h2>
+
+      <figure>
+        <img class="smooth" src="../images/tower-start.png" width="1280" height="720"
+             alt="The player at the foot of one face of the tower, below the first red and blue pickups, with a minimap of the tower in the bottom-right corner">
+        <figcaption>The first face of the tower. The minimap in the corner shows the faces you can't see.</figcaption>
+      </figure>
+
+      <p class="cta">
+        <!-- TODO: swap in <a class="button" href="ITCH URL">Play on itch.io</a> once the web build is uploaded -->
+        <span class="button soon">itch.io build coming soon</span>
+        <span class="note"><kbd>A</kbd> <kbd>D</kbd> move, <kbd>Space</kbd> jumps, <kbd>W</kbd> climbs and opens doors,
+          <kbd>←</kbd> <kbd>→</kbd> scout with the minimap, <kbd>↑</kbd> switches color.</span>
+      </p>
+
+      <section>
+        <h3>About</h3>
+        <p>A puzzle-platformer about climbing a four-sided tower ahead of rising lava. You only ever see one
+          face of the tower: walk off its edge and the tower turns to show the next one, so whatever is around a
+          corner stays out of sight until you look for it.</p>
+        <p><strong>Color switch.</strong> Platforms and doors are neutral, red, or blue, and the colored ones only
+          exist while you are that color. Once you've picked up both colors, a key swaps between them, which can
+          bring the way up into view or make the floor under you vanish.</p>
+        <p><strong>Scouting.</strong> A minimap of the whole tower shows the color you're not, so the two views
+          together are the full picture. Turning it to look at another face freezes you while the lava keeps
+          rising, so every look around a corner costs height.</p>
+      </section>
+
+      <section>
+        <h3>What I built</h3>
+        <ul>
+          <li>The tower: four faces that turn when the player reaches an edge, with the player carried around the corner onto the next face and only the front face solid. It runs on a publish/subscribe event bus, so the tower, player, camera, and UI never call each other directly.</li>
+          <li>Player movement: running, jumping, climbing ropes and ladders, and doors that pair up by color and symbol and take you to their partner.</li>
+          <li>The rising lava with its warning toast, and the win and game-over screens.</li>
+          <li>The color mechanic: pickups, the switch key with its on-screen prompt, camera culling layers that draw only your color, and a check that stops a switch from trapping you inside a platform.</li>
+          <li>The minimap: a second camera orbiting the tower into a render texture, showing the opposite color, framed in the color it shows, with markers for the lava and the player.</li>
+          <li>The level: a tutorial that introduces one color per pickup, then blind corners and routes that trade a short, risky climb against a long, safe one.</li>
+          <li>Iteration from feedback: the minimap and the color mechanic both answer the playtest critique that the first version's rotation rarely asked the player to make a decision.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Technology</h3>
+        <ul class="tags">
+          <li>C#</li>
+          <li>Unity 6 (URP)</li>
+          <li>Git &amp; Git LFS (GitLab)</li>
+          <li>Jira</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer class="wrap">
+    <p>© 2026 Evan Kash.</p>
+  </footer>
+</body>
+</html>

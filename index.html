@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Evan Kash · Game Development Portfolio</title>
-  <meta name="description" content="Evan Kash's game development portfolio: a Unity remake of The Legend of Zelda (NES) with a custom Armor Lock level.">
+  <meta name="description" content="Evan Kash's game development portfolio: Unity games built for EECS 494 at the University of Michigan.">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,57 +21,31 @@
   </header>
 
   <main class="wrap">
-    <article class="project" id="zelda">
-      <p class="eyebrow">EECS 494 · Project 1 · Team project</p>
-      <h2>The Legend of Zelda Remake <span class="subtitle">+ Armor Lock</span></h2>
+    <p class="intro">Games I've built in Unity and C# for EECS 494, Game Design and Development. Pick one to read about it and play it.</p>
 
-      <figure>
-        <img src="images/zelda-custom-level.png" width="1280" height="720"
-             alt="Link in a dungeon room of the custom level, with Digdoggers rolling between the blocks and the NES-style HUD above">
-        <figcaption>The custom level: Digdoggers roll wall to wall, and only Armor Lock stops them.</figcaption>
-      </figure>
+    <div class="cards">
+      <article class="card">
+        <a href="tower/"><img class="smooth" src="images/tower-start.png" width="1280" height="720"
+             alt="The player at the foot of one face of the tower, with a minimap of the tower in the corner"></a>
+        <div class="card-body">
+          <p class="eyebrow">Project 2 · Solo</p>
+          <h2><a href="tower/">Lava Tower <span class="subtitle">+ Color Switch</span></a></h2>
+          <p>A puzzle-platformer on a rotating four-sided tower. Climb ahead of the lava, switch colors to make platforms appear, and scout the faces you can't see.</p>
+          <p class="card-links"><a href="tower/">About the game →</a></p>
+        </div>
+      </article>
 
-      <p class="cta">
-        <a class="button" href="https://squipwerd.itch.io/p1-studio17-zeldagold">Play on itch.io</a>
-        <span class="note">In game, the Triforce at the end of the dungeon (or <kbd>4</kbd>) takes you to the custom level. <kbd>Shift</kbd> is Armor Lock.</span>
-      </p>
-
-      <section>
-        <h3>About</h3>
-        <p>A recreation of the first dungeon of the original <em>Legend of Zelda</em> (NES) in Unity:
-          grid-locked movement, the dungeon's enemies and boss, items like the map and compass, keys and locked doors, and the
-          NES heads-up display. After the classic dungeon comes a custom level built around a new
-          mechanic, Armor Lock.</p>
-        <p><strong>Armor Lock.</strong> Hold Shift and Link plants his fist and raises a bubble shield.
-          While it's up nothing can hurt him, fireballs bounce back at whoever threw them, and rolling
-          Digdoggers blow up against it. It only lasts a few seconds and has to recharge, so choosing
-          when to lock is the level's central decision.</p>
-      </section>
-
-      <section>
-        <h3>What I built</h3>
-        <ul>
-          <li>Link's grid-locked movement and collision tuning, and the weapon framework: sword, bow, bombs, and the boomerang, which stuns most enemies, kills Keese and Gels, and fetches items, like the NES.</li>
-          <li>Enemy systems: knockback and stun, NES drop tables and death sparkles, the Stalfos and the Aquamentus boss, and, with my teammate James, the Wallmaster and blade traps.</li>
-          <li>The NES-style HUD and minimap, where the map fills in the dungeon's rooms and the compass marks the Triforce room.</li>
-          <li>The water tiles, and, with James, the keys, locked doors, and room transitions.</li>
-          <li>Armor Lock: the bubble shield that pushes enemies and reflects fireballs, its shimmer effect, a charge bar with cooldown, and layered sounds. Link earns it by picking up the Triforce at the end of the dungeon, which takes him to the custom level.</li>
-          <li>The custom level: five rooms of Digdoggers that roll wall to wall and explode against the shield, a locked boss door, and a shielded Aquamentus whose bubble only a reflected fireball can pop.</li>
-          <li>A refactor around shared base classes, so weapons and enemies reuse the same health, damage, and movement code.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Technology</h3>
-        <ul class="tags">
-          <li>C#</li>
-          <li>Unity 6</li>
-          <li>Shader Graph</li>
-          <li>Git &amp; Git LFS (GitLab)</li>
-          <li>Jira</li>
-        </ul>
-      </section>
-    </article>
+      <article class="card">
+        <a href="zelda/"><img src="images/zelda-custom-level.png" width="1280" height="720"
+             alt="Link in a dungeon room of the custom level, with Digdoggers rolling between the blocks"></a>
+        <div class="card-body">
+          <p class="eyebrow">Project 1 · Team</p>
+          <h2><a href="zelda/">Zelda Remake <span class="subtitle">+ Armor Lock</span></a></h2>
+          <p>The first dungeon of the NES <em>Legend of Zelda</em>, rebuilt in Unity, plus a custom level built around a bubble shield that reflects fireballs.</p>
+          <p class="card-links"><a href="zelda/">About the game →</a></p>
+        </div>
+      </article>
+    </div>
   </main>
 
   <footer class="wrap">
